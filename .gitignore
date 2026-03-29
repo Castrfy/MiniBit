@@ -1,6 +1,8 @@
 build/*
-__pycache__
-cpp/build
-.vscode/
+__pycache__/*
+cpp/build/*
+.vscode/*
 .DS_Store
-cpp/rle.dSYM/Contents
+cpp/rle.dSYM/Contents/*
+dist/*
+

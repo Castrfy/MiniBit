@@ -1,6 +1,7 @@
 import customtkinter as ctk
 import satellite_panel
 import json
+import requests
 
 ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("blue")
@@ -23,6 +24,7 @@ password_entry = None
 server_entry = None
 status_label = None
 app = None
+jwt_token = None
 
 def create_widget(master, widget, **kwargs):
     return widget(master=master, **kwargs)
@@ -38,25 +40,51 @@ def app_setup():
     app.columnconfigure(0, weight=1)
     app.rowconfigure(0, weight=1)
     return app
-
+'''
 def handle_login():
     username = account_entry.get()
     password = password_entry.get()
-    server_id = server_entry.get()
+    url = server_entry.get()
 
-    if not username or not password or not server_id:
-        status_label.configure(text="Missing credentials", text_color="red")
-        return
+    print(username," : ",password)
 
-    for acc in ACCOUNTS:
-        if username == acc["username"] and password == acc["password"] and server_id == acc["server_code"]:
-            status_label.configure(text="Access Granted", text_color="green")
-            app.destroy()  # Close login GUI
-            satellite_panel.initialize()  # Launch next GUI
-            return
+    session = requests.Session()
 
-    status_label.configure(text="Access Denied", text_color="red")
+    payload = {
+        "username": username,
+        "password": password,
+    }
 
+    headers = {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "User-Agent": "Mozilla/5.0"
+    }
+
+    try:
+        response = session.post(f"https://{url}/login", json=payload, headers=headers, timeout=10)
+
+        try:
+            data = response.json()
+        except requests.exceptions.JSONDecodeError:
+            data = response.text 
+            print(data)
+        status_label.configure(text="Succesfully Logged In", text_color="green")
+        jwt_token = response.json()["accessToken"]
+        print(jwt_token)
+
+    except requests.exceptions.ConnectionError:
+        status_label.configure(text="Connection Error", text_color="red")
+    
+        print(e)
+    except requests.exceptions.Timeout:
+        status_label.configure(text="Timeout", text_color="red")
+        print(e)
+    except requests.exceptions.RequestException as e:
+        status_label.configure(text=f"Access Denied\n{e}", text_color="red")
+        print(e)
+'''
+'''
 def build_ui(app):
     global account_entry, password_entry, server_entry, status_label
 
@@ -101,7 +129,7 @@ def build_ui(app):
     status_label.grid(row=7, column=0, pady=(0, 10))
 
     footer = create_widget(main_frame, ctk.CTkLabel, text="Provided by 🦅", font=(FONT, 13), text_color=SECONDARY_TEXT)
-    footer.grid(row=5, column=0, pady=(0, 10))
+    footer.grid(row=5, column=0, pady=(0, 10))'''
 
 def initialize():
     global ACCOUNTS
@@ -110,7 +138,7 @@ def initialize():
         ACCOUNTS = json.load(f)  # List of dicts
 
     app = app_setup()
-    build_ui(app)
+    #build_ui(app)
     app.mainloop()
 
 initialize()
