@@ -1,19 +1,18 @@
 # 🛰️ MiniBit — Veri Sıkıştırma Paneli
 
-Uzay araçlarına aktarım için veri sıkıştırma işlemi yapan bir uygulama. Python ve CustomTkinter ile oluşturuldu.
+Uzay araçlarına aktarım için veri sıkıştırma işlemi yapan bir uygulama. Python'ın CustomTkinteri ve C++ ile oluşturuldu.
 
 ---
 
 ## Önizleme
 
-MiniBit, binlerce kilometre uzaklıktaki uzay araçlarına veri göndermek için kullanımı kolay bir arayüz sunar. Dosya yüklenir veya elle girilir, sıkıştırma yöntemi seçilir, sonuç görüntülenir ve bir sunucu adresi üzerinden araca iletilir.
+MiniBit'in amacı, binlerce kilometre uzaklıktaki uzay araçlarına veri göndermek için kullanımı kolay bir arayüz sunmaktır. Dosya yüklenir veya elle girilir, sıkıştırma yöntemi seçilir, sonuç görüntülenir ve bir sunucu adresi üzerinden araca iletilir.
 
 ---
 
 ## Özellikler
 
-- 📂 **Dosya yükleme** — cihazdan doğrudan `.txt` dosyalarını yüklemek
-- ✏️ **Elle giriş** — metin yazıp yapıştırabilmek
+- 📂 **Dosya yükleme** — cihazdan doğrudan her türden dosya yüklemek
 - ⚙️ **Birçok sıkıştırma seçeneği** — durum gereksinimlerine göre en uygun yöntemi seçebilmek
 - 📡 **Uzay aracına iletim** — API sunucu adresi girip sıkıştırılmış verileri göndermek
 
@@ -88,6 +87,7 @@ MiniBit/
 - [√] Gerçek sıkıştırma algoritmaları entegre etmek
 - [√] Farklı tür dosyaları desteklemek (\`.csv\`, \`.json\`, \`.bin\`)
 - [ ] Daha fazla sıkıştırma algoritması ekleme
+- [ ] Dosyalara ihtiyaç duymadan elle mesaj yazılıp sıkıştırabilme ve sunucuya gönderme
 - [ ] Sunucu transfer geri bildirimi eklemek (başarı/hata yanıtı)
 - [ ] Sıkıştırma bilgilerini gösteren ekran oluşturmak
 - [ ] Gönderi geçmişi
