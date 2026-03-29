@@ -26,22 +26,22 @@ MiniBit'in amacı, binlerce kilometre uzaklıktaki uzay araçlarına veri gönde
 - \`customtkinter\`
 - CMake
 
-\`\`\`bash
+```bash
 pip install customtkinter
-\`\`\`
+```
 
 \`cpp\` klasörünün içinde build adlı bir klasör oluşturun ve içine girin ardından,
-\`\`\`bash
+```bash
 cmake ..
 make
-\`\`\`
+```
 komutlarını çalıştırarak cpp dosyalarını derleyin
 
 ### Uygulamayı Derleme
 
-\`\`\`bash
+```bash
 python -m PyInstaller satellite_panel.py --onefile --noconsole
-\`\`\`
+```
 
 > \`icon.ico\` dosyasının \`satellite_panel.exe\` ile aynı dizinde olduğundan emin olun.
 > derlenmiş haldeki \`minibit_compresser\`dosyasının \`satellite_panel.exe\` ile aynı dizindeki \`cpp/build/\` klasörünün içinde olduğuna emin olun
@@ -50,9 +50,9 @@ sonrasında uygulamayı çalıştırabilirsiniz.
 
 ### Ya da direk olarak kodu çalıştırın
 
-\`\`\`bash
+```bash
 python satellite_panel.py
-\`\`\`
+```
 
 > \`icon.ico\` dosyasının \`satellite_panel.py\` ile aynı dizinde olduğundan emin olun.
 > derlenmiş haldeki \`minibit_compresser\` dosyasının \`satellite_panel.py\` ile aynı dizindeki \`cpp/build/\` klasörünün içinde olduğuna emin olun
@@ -71,14 +71,14 @@ python satellite_panel.py
 
 ## Proje Yapısı
 
-\`\`\`
+```
 MiniBit/
 ├──cpp
 │   └──build
 │        └── minibit_compresser # Binary çalıştırılabilir uygulama
 ├── main.py        # Ana uygulama
 └── icon.ico       # Uygulama ikonu 
-\`\`\`
+```
 
 ---
 
