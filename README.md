@@ -23,14 +23,14 @@ MiniBit'in amacı, binlerce kilometre uzaklıktaki uzay araçlarına veri gönde
 ### Gereklilikler
 
 - Python 3.8+
-- \`customtkinter\`
+- `customtkinter`
 - CMake
 
 ```bash
 pip install customtkinter
 ```
 
-\`cpp\` klasörünün içinde build adlı bir klasör oluşturun ve içine girin ardından,
+`/cpp/` klasörünün içinde build adlı bir klasör oluşturun ve içine girin ardından,
 ```bash
 cmake ..
 make
@@ -43,8 +43,8 @@ komutlarını çalıştırarak cpp dosyalarını derleyin
 python -m PyInstaller satellite_panel.py --onefile --noconsole
 ```
 
-> \`icon.ico\` dosyasının \`satellite_panel.exe\` ile aynı dizinde olduğundan emin olun.
-> derlenmiş haldeki \`minibit_compresser\`dosyasının \`satellite_panel.exe\` ile aynı dizindeki \`cpp/build/\` klasörünün içinde olduğuna emin olun
+> `icon.ico` dosyasının `satellite_panel.exe` ile aynı dizinde olduğundan emin olun.
+> derlenmiş haldeki `minibit_compresser`dosyasının `satellite_panel.exe` ile aynı dizindeki `cpp/build/` klasörünün içinde olduğuna emin olun
 
 sonrasında uygulamayı çalıştırabilirsiniz.
 
@@ -54,14 +54,14 @@ sonrasında uygulamayı çalıştırabilirsiniz.
 python satellite_panel.py
 ```
 
-> \`icon.ico\` dosyasının \`satellite_panel.py\` ile aynı dizinde olduğundan emin olun.
-> derlenmiş haldeki \`minibit_compresser\` dosyasının \`satellite_panel.py\` ile aynı dizindeki \`cpp/build/\` klasörünün içinde olduğuna emin olun
+> `icon.ico` dosyasının `satellite_panel.py` ile aynı dizinde olduğundan emin olun.
+> derlenmiş haldeki `minibit_compresser` dosyasının `satellite_panel.py` ile aynı dizindeki `cpp/build/` klasörünün içinde olduğuna emin olun
 
 ---
 
 ## Kullanım
 
-1. **Veri yükleme** — *Browse File* alanını kullanarak \`.txt\` dosyası yüklenebilir veya elle veri girilebilir
+1. **Veri yükleme** — *Browse File* alanını kullanarak `.txt` dosyası yüklenebilir veya elle veri girilebilir
 2. **Sunucu adresi girme** — uzay aracının API adresi girilir ve *Set API* tuşuna basılır
 3. **Sıkıştırma yöntemi seçme** — dropdown kutusundan istenen yöntem seçilir
 4. ***Compress* butonuna bas** — sıkıştırılan veri sonuç ekranında görünür
@@ -85,7 +85,7 @@ MiniBit/
 ## Yol Haritası
 
 - [√] Gerçek sıkıştırma algoritmaları entegre etmek
-- [√] Farklı tür dosyaları desteklemek (\`.csv\`, \`.json\`, \`.bin\`)
+- [√] Farklı tür dosyaları desteklemek (`.csv`, `.json`, `.bin`)
 - [ ] Daha fazla sıkıştırma algoritması ekleme
 - [ ] Dosyalara ihtiyaç duymadan elle mesaj yazılıp sıkıştırabilme ve sunucuya gönderme
 - [ ] Sunucu transfer geri bildirimi eklemek (başarı/hata yanıtı)
