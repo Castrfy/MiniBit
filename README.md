@@ -1,3 +1,6 @@
+
+## TUA ASTRO HACKATHON SIRASINDA 48 SAAT SÜREDE YAPILMIŞTIR
+
 # 🛰️ MiniBit — Veri Sıkıştırma Paneli
 
 Uzay araçlarına aktarım için veri sıkıştırma işlemi yapan bir uygulama. Python'un CustomTkinteri ve C++ ile oluşturuldu.
